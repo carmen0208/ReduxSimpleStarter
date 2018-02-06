@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+const API_KEY = 'you_youtube_api_key';
+
 // Create a new component should produce some HTML
 const App = () => {
     return <div>Hi</div>;
