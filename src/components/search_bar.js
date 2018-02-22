@@ -9,8 +9,11 @@ import React, {Component } from 'react';
 //class component
 class SearchBar extends Component {
     render() {
-        return <input />;
+        return <input onChange={(event) =>  console.log(event.target.value)}/>;
     }
+    // inputText(event) {
+    //     console.log(event.target.value);
+    // }
 }
 
 export default SearchBar;
