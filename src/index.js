@@ -4,9 +4,6 @@ import App from './components/app';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducers/index'
-// const App = () => {
-//     return <div> hi </div>
-// }
 
 const store = createStore(rootReducer)
 
