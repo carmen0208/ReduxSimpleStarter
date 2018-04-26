@@ -40,7 +40,7 @@ class SearchBar extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchWeather}, dispatch);
+    return bindActionCreators({ fetchWeather }, dispatch);
 }
 
 // function map
