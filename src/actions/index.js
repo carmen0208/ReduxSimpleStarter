@@ -5,13 +5,28 @@ const ROOT_URL=`http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}
 
 export const FEATHER_WEATHER = 'FEATHER_WEATHER';
 
-export function fetchWeather(city) {
-    const url = `${ROOT_URL}&q=${city}`;
-    const request = axios.get(url);
+// export function fetchWeather(city) {
+//     const url = `${ROOT_URL}&q=${city}`;
+//     const request = axios.get(url);
 
-    console.log('Request:', request);
-    return {
+//     console.log('Request:', request);
+    
+//     return {
+//         type: FEATHER_WEATHER,
+//         payload: request
+//     };
+// }
+
+
+export function fetchWeather(city){
+  return dispatch => {
+    const url = `${ROOT_URL}&q=${city}`;
+    axios.get(url).then(request => {
+      dispatch({
         type: FEATHER_WEATHER,
         payload: request
-    };
+      })
+    })
+    
+  }
 }
