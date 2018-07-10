@@ -25,12 +25,12 @@ class RendorTree extends React.Component {
   wraper (event) {
     console.log(event.target.id)
     ReactDOM.render(<Wrapper shape={event.target.id} />,
-      document.getElementById('diff-root'),
-      function () {
-        console.log('=====================')
-      })
+      document.getElementById('diff-root'))
   }
-
+  handleClick2 () {
+    // undefined or RendorTree objects
+    console.log('this is:', this)
+  }
   render () {
     return (
       <div>
@@ -43,6 +43,12 @@ class RendorTree extends React.Component {
         <button id='none' onClick={this.wraper}>Clear</button>
         <button onClick={this.handleClick}>
           {this.state.isToggleOn ? 'ON' : 'OFF'}
+        </button>
+        <button onClick={this.handleClick2}>
+          not Bind(undefined)
+        </button>
+        <button onClick={(e) => this.handleClick2(e)}>
+          Bind
         </button>
         <div id='diff-root' />
       </div>
