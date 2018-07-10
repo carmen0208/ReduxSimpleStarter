@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
+import Wrapper from './Wrapper'
 class RendorTree extends React.Component {
   constructor (props) {
     super(props)
@@ -9,7 +9,7 @@ class RendorTree extends React.Component {
 
   wraper (event) {
     console.log(event.target.id)
-    ReactDOM.render(<p >{event.target.id}</p>,
+    ReactDOM.render(<Wrapper shape={event.target.id} />,
       document.getElementById('diff-root'),
       function () {
         console.log('=====================')
